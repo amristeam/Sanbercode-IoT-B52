@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    // Menampilkan bilangan genap dari 4 sampai 14
+    for (int i = 4; i <= 14; i += 2) {
+        // Menggunakan continue untuk melanjutkan ke iterasi berikutnya jika i adalah 6
+        if (i == 6) {
+            continue;
+        }
+
+        // Menggunakan break untuk menghentikan perulangan jika i melebihi 10
+        if (i > 10) {
+            break;
+        }
+
+        // Mencetak nilai i
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
