@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int i = 5;
+
+    // Menggunakan pernyataan goto untuk membuat urutan tampilan
+    label:
+    printf("%d\n", i);
+
+    i--;
+
+    // Menggunakan pernyataan goto untuk melakukan lompatan kembali ke label
+    if (i >= 1) {
+        goto label;
+    }
+
+    return 0;
+}
