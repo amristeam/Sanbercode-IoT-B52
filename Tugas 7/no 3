@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    // Inisialisasi variabel i dengan nilai awal 5
+    int i = 5;
+
+    // Menampilkan bilangan ganjil dari 5 sampai 15 menggunakan do while
+    do {
+        printf("%d\n", i);
+        i += 2;  // Menambahkan 2 untuk mendapatkan bilangan ganjil berikutnya
+    } while (i <= 15);
+
+    return 0;
+}
