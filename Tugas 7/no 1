@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    // Menampilkan bilangan genap dari 4 sampai 14
+    for (int i = 4; i <= 14; i += 2) {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
