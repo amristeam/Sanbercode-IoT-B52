@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    // Inisialisasi variabel i dengan nilai awal 3
+    int i = 3;
+
+    // Menampilkan bilangan ganjil dari 3 sampai 13 menggunakan while
+    while (i <= 13) {
+        printf("%d\n", i);
+        i += 2;  // Menambahkan 2 untuk mendapatkan bilangan ganjil berikutnya
+    }
+
+    return 0;
+}
