@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Deklarasi variabel eksternal
+extern int i;
+
+int main() {
+    printf("nilai i didalam main() = %d\n", i);
+
+    fungsi1();  // Memanggil fungsi1
+
+    return 0;
+}
+
+void fungsi1(void) {
+    // Menggunakan variabel eksternal i
+    extern int i;
+    
+    // Menambahkan program untuk menghasilkan angka 10
+    i = i + 5;
+
+    printf("nilai i didalam fungsi1() = %d\n", i);
+}
+
+// Inisialisasi variabel eksternal
+int i = 2;
