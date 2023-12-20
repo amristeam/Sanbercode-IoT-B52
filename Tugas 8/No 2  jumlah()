@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+// Deklarasi fungsi jumlah
+int jumlah(int a, int b) {
+    // Mengembalikan hasil penjumlahan dari dua parameter
+    return a + b;
+}
+
+int main() {
+    int hasil;
+
+    // Memanggil fungsi jumlah dengan argumen 5 dan 10
+    hasil = jumlah(5, 10);
+
+    // Mencetak hasil penjumlahan
+    printf("Hasil penjumlahannya adalah %d\n", hasil);
+
+    return 0;
+}
