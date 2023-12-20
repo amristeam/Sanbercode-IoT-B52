@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+// Fungsi myFunction dengan parameter bertipe char*
+void myFunction(char *namaperusahaan) {
+    printf("Halo selamat datang di %s\n", namaperusahaan);
+}
+
+int main() {
+    // Memanggil myFunction dengan argumen "Sanbercode"
+    myFunction("Sanbercode");
+
+    return 0;
+}
