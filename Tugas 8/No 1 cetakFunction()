@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+// Deklarasi fungsi cetakFunction
+void cetakFunction() {
+    // Mengganti <nama kamu> dengan nama Anda
+    printf("Hallo nama saya Amri Ramadhan\n");
+    printf("Saya sedang belajar IoT\n");
+}
+
+int main() {
+    // Memanggil fungsi cetakFunction
+    cetakFunction();
+
+    return 0;
+}
