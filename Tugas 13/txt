@@ -1,1 +1,4 @@
-
+/*Soal
+Buatlah sebuah pesan “Terdeteksi Asap” pada Serial Monitor, jika Sensor Asap mendeteksi adanya asap. Sehingga kita bisa memonitoring jika terdeteksi asap.
+Buat program pendeteksi adanya asap dengan menggunakan perangkat ESP8266, Sensor MQ-2, Buzzer, dan LED. Jika terdeteksi asap, maka buzzer akan berbunyi dan LED akan berkedip setiap 200ms.
+Note: Tambahkan resistor jika menggunakan LED */
