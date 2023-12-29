@@ -1,0 +1,4 @@
+//Buat program untuk mengontrol 4 Lampu LED dengan menggunakan Blynk. 
+//Buat 2 lampu, dalam satu tombol, jadi jika tombol ditekan, 2 lampu tersebut menyala. 
+//Sedangkan 2 lampu yang lain buat masing-masing lampu 1 tombol. Jadi tampilan blynk ada 3 tombol.
+// program saya belum selesai berhasil
