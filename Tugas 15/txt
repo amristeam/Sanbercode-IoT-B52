@@ -1,0 +1,4 @@
+//tugas 15
+//Buatlah program untuk monitoring Asap atau kebocoran gas menggunakan Sensor MQ-2 melalui aplikasi Blynk yang ada di web dan Handphone. 
+//Tentukan nilai ambang bahaya asap atau gasnya, ketika nilai sensor diatas ambang batas bahaya maka buzzer akan berbunyi.
+//hasil: belum berjalan baik
