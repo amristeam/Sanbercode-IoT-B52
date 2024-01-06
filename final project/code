@@ -1,0 +1,81 @@
+#include <Arduino.h>
+#include <BlynkSimpleEsp8266.h>
+
+// Konfigurasi WiFi
+char auth[] = "YOUR_BLYNK_AUTH_TOKEN";
+char ssid[] = "YOUR_WIFI_SSID";
+char pass[] = "YOUR_WIFI_PASSWORD";
+
+// Pin ESP8266
+#define LDR_PIN A0
+#define LED_1_PIN D1
+#define BUTTON_1_PIN D2
+#define LED_2_PIN D3
+#define BUTTON_2_PIN D4
+#define LED_3_PIN D5
+#define BUTTON_3_PIN D6
+
+// Variabel global
+int ldrValue = 0;
+
+void setup() {
+  // Mulai serial
+  Serial.begin(115200);
+
+  // Koneksi ke WiFi
+  Blynk.begin(auth, ssid, pass);
+
+  // Inisialisasi pin
+  pinMode(LDR_PIN, INPUT);
+  pinMode(LED_1_PIN, OUTPUT);
+  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
+  pinMode(LED_2_PIN, OUTPUT);
+  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
+  pinMode(LED_3_PIN, OUTPUT);
+  pinMode(BUTTON_3_PIN, INPUT_PULLUP);
+
+  // Fungsi untuk mengontrol LED berdasarkan nilai LDR
+  Blynk.virtualWrite(V1, ldrValue);
+  Blynk.virtualWrite(V2, digitalRead(BUTTON_1_PIN));
+  Blynk.virtualWrite(V3, digitalRead(BUTTON_2_PIN));
+  Blynk.virtualWrite(V4, digitalRead(BUTTON_3_PIN));
+}
+
+void loop() {
+  // Baca nilai LDR
+  ldrValue = analogRead(LDR_PIN);
+
+  // Kirim nilai LDR ke Blynk
+  Blynk.virtualWrite(V1, ldrValue);
+
+  // Kontrol LED berdasarkan nilai LDR
+  if (ldrValue < 500) {
+    digitalWrite(LED_1_PIN, HIGH);
+  } else {
+    digitalWrite(LED_1_PIN, LOW);
+  }
+
+  // Baca status tombol dan kontrol LED melalui Blynk
+  if (Blynk.connected()) {
+    Blynk.run();
+  }
+
+  // Tunggu sebentar
+  delay(100);
+}
+
+// Fungsi untuk menangani perubahan status tombol pada Blynk
+BLYNK_WRITE(V2) {
+  int ledStatus = param.asInt();
+  digitalWrite(LED_2_PIN, ledStatus);
+}
+
+BLYNK_WRITE(V3) {
+  int ledStatus = param.asInt();
+  digitalWrite(LED_3_PIN, ledStatus);
+}
+
+BLYNK_WRITE(V4) {
+  int ledStatus = param.asInt();
+  // Lakukan sesuatu dengan nilai tombol di V4
+}
